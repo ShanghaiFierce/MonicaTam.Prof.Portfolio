@@ -91,6 +91,7 @@ header nav ul li a {
 
 .about-info h2 {
     float: left;
+    line-height: 3;
 }
 
 .about-info .content {
@@ -106,7 +107,7 @@ header nav ul li a {
 /* PROJECTS Section */
 
 .project-info h2 {
-    float: left;
+    line-height: 10;
 }
 
 .project-info .content {
@@ -145,7 +146,7 @@ header nav ul li a {
 
 .item1 {
     background-image: url(/assets/images/Horiseon.gif);
-    background-position: center;
+    background-position: top;
     background-repeat: none;
     background-size: cover;
     grid-column: span 5;
@@ -153,21 +154,30 @@ header nav ul li a {
 }
 
 .item2 {
-    background-image: url(/assets/images/Horiseon.gif);
-    background-position: center;
+    background-image: url(/assets/images/Run\ Buddy\ M.gif);
+    background-position: top;
     background-repeat: none;
     background-size: cover;
-    grid-column: span 5;
-    grid-row: span 2;
+    grid-column: span 2;
+    grid-row: span 1;
 }
 
 .item3 {
-    background-image: url(/assets/images/Horiseon.gif);
-    background-position: center;
+    background-image: url(/assets/images/Run\ Buddy\ Web\ .gif);
+    background-position: top;
     background-repeat: none;
     background-size: cover;
-    grid-column: span 5;
+    grid-column: span 4;
     grid-row: span 2;
+}
+
+.item4 {
+    background-image: url(/assets/images/Horiseon.gif);
+    background-position: top;
+    background-repeat: none;
+    background-size: cover;
+    grid-column: span 2;
+    grid-row: span 1;
 }
 
 /* CONTACT ME Section */
@@ -183,6 +193,7 @@ header nav ul li a {
 
 .contact-details h2 {
     background-color: bisque;
+    line-height: 8;
 }
 
 .contact-details {
