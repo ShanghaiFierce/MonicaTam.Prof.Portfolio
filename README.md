@@ -1,3 +1,13 @@
+
+<h2> Elements included in this project:</h2>
+<ul>
+<li>flexbox</li>
+<li>CSS Grid Layout</li>
+<li>media queries</li>
+<li>CSS variables</li>
+</ul>
+
+
 <h1>User Story</h1>
 
 <h2>AS AN employer</h2>

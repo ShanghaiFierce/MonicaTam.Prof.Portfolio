@@ -1,5 +1,5 @@
 .root {
-    Top-sizing: {width: 50%;height: 150px; margin: 0; padding: 20px 30px;}
+    
 }
 
 * {
@@ -9,45 +9,47 @@
 }
 
 header {
-    width: 50%;
-    height: 150px;
-    margin: 0;
-    padding: 20px 30px;
-    background-color: lightskyblue;
-    float: left;
+    padding: 50px 50px;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
 }
 
-.header h1 {
-    width: 10%;
-    color: whitesmoke;
+header h1 {
+    margin: 0px;
+    color: slategrey;
     font-size: 36px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px 2px rgba(192, 192, 192, 0.5);
 }
 
-/*.header h1 a:hover */{
-    text-shadow: 0 0 2px rgba(192, 192, 192, 0.5);
+header a {
+    text-decoration: underline;
+    color: coral;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-nav {
-    width: 50%;
-    height: 150px;
-    margin: 0px;
-    padding: 20px 30px;
-    background-color: slategray;
-    float: left;
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
     display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 }
 
-.nav ul li {
-    width: 35%;
-    float: right;
-    display: inline-block;
-    justify-content: flex-end;
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 2vw;
 }
-
 /* General.section title styling */
 
 .section-title {
@@ -73,4 +75,35 @@ nav {
     color: cadetblue;
     display: flex;
 
+}
+
+
+/* CONTACT ME SECTION */
+
+.contact-info {
+    width: 100%;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+    background-color:slategray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-details h2 {
+    background-color: bisque;
+}
+
+.contact-details {
+    margin: 25px 0;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 2vw;
+    color: bisque;
+    text-decoration: underline;
+}
+
+.contact-details a {
+    color: black;
 }
