@@ -1,5 +1,7 @@
 .root {
-    
+    --tur: (cadetblue);
+    --cor: (coral);
+    --test: (lightgreen);
 }
 
 * {
@@ -9,7 +11,7 @@
 }
 
 header {
-    padding: 50px 50px;
+    padding: 30px 50px;
     background-color: bisque;
     display: flex;
     justify-content: space-between;
@@ -20,8 +22,8 @@ header {
 
 header h1 {
     margin: 0px;
-    color: slategrey;
-    font-size: 36px;
+    color: coral;
+    font-size: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -50,44 +52,132 @@ header nav ul li a {
     font-weight: bold;
     font-size: 2vw;
 }
-/* General.section title styling */
 
-.section-title {
+/* JUMBOTRON Section */
+.jumbotron {
+    background-image: url(/assets/images/water_blue.jpg);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.jumbotron h2 {
+    margin: 0px;
+    padding: 100px 100px 30px 100px;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+    color: coral;
+    text-shadow:2px 2px 2px bisque;
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* About Info Styling */
+
+.about-info h2, .project-info h2, .contact-info h2 {
     width: 25%;
-    margin: 10px;
+    margin: 30px 0;
     padding: 25px;
     font-size: 36px;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: coral;
-    display: flex;
-    border-right: black 3px solid;
+    color: cadetblue;
+    border-right: rgb(38, 50, 61) 3px solid;
     text-align: right;
 }
 
-.content {
-    width: 50%;
-    height: auto;
-    margin: 10px;
-    padding: 25px;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: cadetblue;
-    display: flex;
-
+.about-info h2 {
+    float: left;
 }
 
+.about-info .content {
+    width: 75%;
+    margin: 10px 0px;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    float: right;
+}
 
-/* CONTACT ME SECTION */
+/* PROJECTS Section */
+
+.project-info h2 {
+    float: left;
+}
+
+.project-info .content {
+    width: 100%;
+    margin: 10px 0px;
+    padding: 25px;
+    font-size: 16px;
+    font-weight: bolder;
+    float: left;
+}
+
+.project-wrapper {
+    display: grid;
+    width: 65%;
+    margin: 10px;
+    padding: 60px;
+    float: left;
+}
+
+.project-grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+}
+
+.project-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px solid coral;
+    margin: 5px auto;
+    font-size: 35px;
+}
+
+.item1 {
+    background-image: url(/assets/images/Horiseon.gif);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    grid-column: span 5;
+    grid-row: span 2;
+}
+
+.item2 {
+    background-image: url(/assets/images/Horiseon.gif);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    grid-column: span 5;
+    grid-row: span 2;
+}
+
+.item3 {
+    background-image: url(/assets/images/Horiseon.gif);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    grid-column: span 5;
+    grid-row: span 2;
+}
+
+/* CONTACT ME Section */
 
 .contact-info {
     width: 100%;
     padding: 20px;
     display: inline-block;
     vertical-align: top;
-    background-color:slategray;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
