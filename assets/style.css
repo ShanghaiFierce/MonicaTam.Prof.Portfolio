@@ -1,6 +1,3 @@
-.root {
-    Top-sizing: {width: 50%;height: 150px; margin: 0; padding: 20px 30px;}
-}
 
 * {
     margin: 0;
@@ -9,68 +6,418 @@
 }
 
 header {
-    width: 50%;
-    height: 150px;
-    margin: 0;
-    padding: 20px 30px;
-    background-color: lightskyblue;
-    float: left;
-}
-
-.header h1 {
-    width: 10%;
-    color: whitesmoke;
-    font-size: 36px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px 2px rgba(192, 192, 192, 0.5);
-}
-
-/*.header h1 a:hover */{
-    text-shadow: 0 0 2px rgba(192, 192, 192, 0.5);
-}
-
-nav {
-    width: 50%;
-    height: 150px;
-    margin: 0px;
-    padding: 20px 30px;
-    background-color: slategray;
-    float: left;
+    padding: 30px 50px;
+    background-color: bisque;
     display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
 }
 
-.nav ul li {
-    width: 35%;
-    float: right;
-    display: inline-block;
+header h1 {
+    margin: 0px;
+    color: coral;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header a {
+    text-decoration: underline;
+    color: coral;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li {
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+/* change link color on hover */
+header li a:hover {
+    background-color: cadetblue;
+    color: white;
+}
+
+/* JUMBOTRON Section */
+.jumbotron {
+    background-image: url(/assets/images/water_blue.jpg);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.jumbotron h2 {
+    margin: 0px;
+    padding: 100px 100px 30px 100px;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+    color: coral;
+    text-shadow:2px 2px 2px bisque;
+    display:flex;
     justify-content: flex-end;
 }
 
-/* General.section title styling */
+/* MAIN STYLE RULES */
+.about-info, .project-info, .contact-info {
+    width: 100%;
+    padding: 30px 20px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
 
-.section-title {
-    width: 25%;
-    margin: 10px;
+.about-info h2, .project-info h2, .contact-info h2 {
+    width: 20%;
+    margin: 20px 0;
     padding: 25px;
     font-size: 36px;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: coral;
-    display: flex;
-    border-right: black 3px solid;
+    border-right: slategray 3px solid;
     text-align: right;
+    text-shadow: 2px 2px 2px bisque;
 }
 
-.content {
-    width: 50%;
-    height: auto;
-    margin: 10px;
-    padding: 25px;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: cadetblue;
-    display: flex;
+/* ABOUT ME Section */
 
+.about-info h2 {
+    float: left;
+    line-height: 3;
+}
+
+.about-info .content {
+    width: 75%;
+    margin: 10px 0px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    float: right;
+}
+
+/* PROJECTS Section */
+
+.project-info h2 {
+    line-height: 3;
+}
+
+.project-info .content {
+    width: 100%;
+    margin: 10px 0px;
+    padding: 25px;
+    font-size: 16px;
+    font-weight: bolder;
+    float: left;
+}
+
+/* Beginning of Projects Grid */
+.project-grid-container {
+    display: grid;
+    width: 75%;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(6, 150px);
+    grid-template-rows: repeat(4, 200px);
+    grid-gap: 5px;
+    grid-auto-flow: dense;
+}
+
+.project-item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px auto;
+    font-size: 35px;
+    position: relative;
+}
+
+.project-item p {
+    width: 95%;
+    font-size: 18px;
+    color: white;
+    bottom: 15px;
+    right: 20px;
+    background-color: coral;
+    position: absolute;
+    transition-timing-function:ease-in;
+    z-index:1;
+}
+
+.project-item::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient( rgba(255, 255, 255, 0.664), #024e76);
+    position: absolute;
+    top: 0;
+    left: 0;  
+    opacity: 0;
+}
+
+.project-item:hover:after {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.item1, .item2, .item3 {
+    background-position: top;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.item1 {
+    background-image: url(/assets/images/Horiseon.gif);
+    grid-column: span 4;
+    grid-row: span 2;
+    transition: transform .2s;
+}
+
+.item2 {
+    background-image: url(/assets/images/Run\ Buddy\ M.gif);
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.item3 {
+    background-image: url(/assets/images/Run\ Buddy\ Web\ .gif);
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+/* enarge gifs on hover */
+.item1:hover, .item2:hover, .item3:hover {
+    transform: scale(1.5);
+}
+
+/* CONTACT ME Section */
+.contact-info h2 {
+    line-height: 3;
+}
+
+.contact-details {
+    margin: 60px 0 25px 0;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.contact-details a {
+    color: black;
+    text-decoration: underline;
+    text-align: justify;
+}
+
+/* change color of link */
+.contact-details a:hover {
+    background-color: cadetblue;
+    color: white;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 1024px) {
+    
+    header {
+        padding: 20px 30px;
+    }
+    
+    header h1 {
+        font-size: 35px;
+    }
+    
+    header a {
+        font-size: 20px;
+    }
+
+    .jumbotron h2 {
+        margin: 0px;
+        padding: 100px 100px 30px 100px;
+        font-size: 26px;
+        text-shadow:2px 2px 2px bisque;    
+    }
+    
+    .about-info h2, .project-info h2, .contact-info h2 {
+        margin: 20px 0;
+        padding: 25px;
+        font-size: 22px;
+        border-right: slategray 2px solid;
+    }
+    
+    .about-info .content {
+        margin: 6px 0px;
+        padding: 5px;
+        font-size: 16px;
+    }
+    
+    .about-info {
+        line-height: 1.5;
+    }
+
+    .project-grid-container {
+        display: grid;
+        width: 75%;
+        grid-template-columns: repeat(6, 100px);
+        grid-template-rows: repeat(4, 150px);
+    }
+    .project-item p {
+        width: 95%;
+        font-size: 16px;
+        bottom: 10px;
+        right: 15px;
+        position: absolute;
+    }
+
+    .contact-details {
+        line-height: 1;
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px 30px;
+    }
+    
+    header h1 {
+        font-size: 35px;
+    }
+    
+    header a {
+        font-size: 20px;
+    }
+
+    .jumbotron h2 {
+        margin: 0px;
+        padding: 100px 100px 30px 100px;
+        font-size: 26px;
+        text-shadow:2px 2px 2px bisque;    
+    }
+    
+    .about-info h2, .project-info h2, .contact-info h2 {
+        margin: 20px 0;
+        padding: 25px;
+        font-size: 22px;
+        border-right: slategray 2px solid;
+    }
+    
+    .about-info .content {
+        margin: 6px 0px;
+        padding: 5px;
+        font-size: 16px;
+    }
+    
+    .about-info {
+        line-height: 1.5;
+    }
+
+    .project-grid-container {
+        display: grid;
+        width: 75%;
+        grid-template-columns: repeat(6, 100px);
+        grid-template-rows: repeat(4, 150px);
+    }
+    .project-item p {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    .contact-details {
+        line-height: 1;
+    }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+   
+    header {
+        padding: 10px 20px;
+    }
+    
+    header h1 {
+        font-size: 25px;
+    }
+    
+    header a {
+        font-size: 18px;
+    }
+
+    .jumbotron h2 {
+        margin: 0px;
+        padding: 100px 100px 30px 100px;
+        font-size: 25px;
+        text-shadow:1px 1px 1px bisque;    
+    }
+    
+    .about-info h2, .project-info h2, .contact-info h2 {
+        margin: 10px 0;
+        padding: 5px;
+        font-size: 20px;
+        border-right: slategray 2px solid;
+    }
+    
+    .about-info .content {
+        margin: 0px;
+        padding: 5px;
+        font-size: 16px;
+    }
+    
+    .about-info {
+        line-height: 1;
+    }
+
+    .project-grid-container {
+        display: grid;
+        width: 70%;
+        grid-template-columns: repeat(1, 280px);
+        grid-template-rows: repeat(3, 210px);
+    }
+
+    .project-info {
+        line-height: 2;
+    }
+
+    .project-item p {
+        font-size: 16px;
+        width: 95%;
+        bottom: 5px;
+        right: 10px;
+    }
+
+    .item1 {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .item2 {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .item3 {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .contact-details {
+        line-height: 1;
+}
 }
