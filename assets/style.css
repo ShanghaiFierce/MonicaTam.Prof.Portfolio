@@ -6,7 +6,7 @@
 }
 /* HEADER Section */
 header {
-    padding: 30px 50px;
+    padding: 30px 50px 0px 50px;
     background-color: bisque;
     display: flex;
     justify-content: space-between;
@@ -16,20 +16,32 @@ header {
 }
 
 header h1 {
-    margin: 0px;
+    margin-bottom: 25px;
     color: coral;
-    font-size: 50px;
+    font-size: 38px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow:1px px 2px slategray;
+    text-decoration: underline;
 }
 
+/* HEADER.Nav Section */
 header a {
     text-decoration: underline;
     color: coral;
-    font-size: 36px;
+    font-size: 22px;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 2vw;
 }
-/* HEADER.Nav Section */
+
+/* change link color on hover */
+header a:hover {
+    background-color: cadetblue;
+    color: white;
+}
+
 header nav {
     margin: 7px 0;
 }
@@ -40,18 +52,6 @@ header nav ul {
     justify-content: space-between;
     align-items: center;
     list-style: none;
-}
-
-header nav ul li {
-    padding: 10px 15px;
-    font-weight: bold;
-    font-size: 2vw;
-}
-
-/* change link color on hover */
-header li a:hover {
-    background-color: cadetblue;
-    color: white;
 }
 
 /* JUMBOTRON Section */
@@ -65,7 +65,7 @@ header li a:hover {
 .jumbotron h2 {
     margin: 0px;
     padding: 100px 100px 30px 100px;
-    font-size: 38px;
+    font-size: 32px;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: underline;
@@ -86,9 +86,9 @@ header li a:hover {
 
 .about-info h2, .project-info h2, .contact-info h2 {
     width: 20%;
-    margin: 20px 0;
-    padding: 25px;
-    font-size: 36px;
+    margin: 10px 0 30px 20px;
+    padding: 10px;
+    font-size: 32px;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: coral;
@@ -108,7 +108,7 @@ header li a:hover {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    margin: 30px 0 0 30px;
+    margin:15px 0 0 30px;
     padding: 15px;
     display: flex;
 }
@@ -117,7 +117,7 @@ header li a:hover {
     width: 65%;
     margin: 50px 0px;
     padding: 10px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: lighter;
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
     float: right;
@@ -143,33 +143,31 @@ header li a:hover {
     display: grid;
     width: 75%;
     margin: 10px;
-    padding: 10px;
+    padding: 0px;
     float: left;
     display: grid;
-    grid-template-columns: repeat(6, 150px);
-    grid-template-rows: repeat(4, 200px);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(4, 150px);
     grid-gap: 5px;
     grid-auto-flow: dense;
-}
-
-.project-item {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin: 5px auto;
-    font-size: 35px;
-    position: relative;
+    overflow: overlay;
 }
 
 .project-item a {
-    max-width: 95%;
-    font-size: 18px;
-    color: white;
+    width: 40%;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    align-items: flex-end;
+    margin-block-start: 30%;
+    font-size: 16px;
     padding: 5px;
-    bottom: 5px;
-    left: 5px;
+    color: whitesmoke;
     background-color: coral;
-    position: absolute;
+    border: whitesmoke 3px solid;
+    position: relative;
     transition-timing-function:ease-in;
     z-index: 1;
 }
@@ -222,11 +220,11 @@ header li a:hover {
 
 /* CONTACT ME Section */
 .contact-info h2 {
-    line-height: 3;
+    line-height: 2;
 }
 
 .contact-details {
-    margin: 60px 0 25px 0;
+    margin: 10px 0 10px 0;
     padding: 10px 15px;
     font-weight: bold;
     font-size: 2vw;
@@ -283,22 +281,9 @@ header li a:hover {
         line-height: 1.5;
     }
 
-    .project-grid-container {
-        display: grid;
-        width: 75%;
-        grid-template-columns: repeat(6, 100px);
-        grid-template-rows: repeat(4, 150px);
-    }
-    .project-item a {
-        width: 95%;
-        font-size: 16px;
-        left: 5px;
-        bottom: 5px;
-        position: absolute;
-    }
-
     .contact-details {
-        line-height: 1;
+        margin-top: 35px;
+    }
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
@@ -380,18 +365,23 @@ header li a:hover {
     .about-info h2, .project-info h2, .contact-info h2 {
         margin: 10px 0;
         padding: 5px;
-        font-size: 20px;
+        font-size: 13px;
         border-right: slategray 2px solid;
     }
     
     .about-info .content {
         margin: 0px;
         padding: 5px;
-        font-size: 16px;
+        font-size: 13px;
     }
     
     .about-info {
         line-height: 1;
+    }
+
+    .about-info img {
+        width: 35%;
+        height: 35%;
     }
 
     .project-grid-container {

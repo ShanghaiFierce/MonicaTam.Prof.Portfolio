@@ -18,3 +18,5 @@ This is a project showcase of all the coding projects I've worked on and deploye
 </p>
 
 <h2>Screenshot:</h2>
+
+<img src="assets\images\Monica Tam _ Professional Portfolio (2).gif">
