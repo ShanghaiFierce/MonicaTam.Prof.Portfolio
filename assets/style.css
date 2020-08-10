@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* HEADER Section */
 header {
     padding: 30px 50px;
     background-color: bisque;
@@ -29,7 +29,7 @@ header a {
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+/* HEADER.Nav Section */
 header nav {
     margin: 7px 0;
 }
@@ -104,9 +104,18 @@ header li a:hover {
     line-height: 3;
 }
 
+.about-info img {
+    max-width: 60%;
+    height: auto;
+    margin: 10px;
+    padding: 25px;
+    display: flex;
+
+}
+
 .about-info .content {
-    width: 75%;
-    margin: 10px 0px;
+    width: 65%;
+    margin: 50px 0px;
     padding: 10px;
     font-size: 20px;
     font-weight: lighter;
@@ -152,16 +161,17 @@ header li a:hover {
     position: relative;
 }
 
-.project-item p {
-    width: 95%;
+.project-item a {
+    max-width: 95%;
     font-size: 18px;
     color: white;
-    bottom: 15px;
-    right: 20px;
+    padding: 5px;
+    bottom: 5px;
+    left: 5px;
     background-color: coral;
     position: absolute;
     transition-timing-function:ease-in;
-    z-index:1;
+    z-index: 1;
 }
 
 .project-item::after {
@@ -279,11 +289,11 @@ header li a:hover {
         grid-template-columns: repeat(6, 100px);
         grid-template-rows: repeat(4, 150px);
     }
-    .project-item p {
+    .project-item a {
         width: 95%;
         font-size: 16px;
-        bottom: 10px;
-        right: 15px;
+        left: 5px;
+        bottom: 5px;
         position: absolute;
     }
 
@@ -335,7 +345,7 @@ header li a:hover {
         grid-template-columns: repeat(6, 100px);
         grid-template-rows: repeat(4, 150px);
     }
-    .project-item p {
+    .project-item a {
         width: 70%;
         font-size: 14px;
     }
@@ -395,11 +405,11 @@ header li a:hover {
         line-height: 2;
     }
 
-    .project-item p {
+    .project-item a {
         font-size: 16px;
         width: 95%;
         bottom: 5px;
-        right: 10px;
+        left: 5px;
     }
 
     .item1 {
