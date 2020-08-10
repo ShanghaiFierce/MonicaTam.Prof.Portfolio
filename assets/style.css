@@ -48,9 +48,10 @@ header nav ul li {
     font-size: 2vw;
 }
 
-header li::after {
-    content: "";
-    color: slategray;
+/* change link color on hover */
+header li a:hover {
+    background-color: cadetblue;
+    color: white;
 }
 
 /* JUMBOTRON Section */
@@ -72,7 +73,6 @@ header li::after {
     text-shadow:2px 2px 2px bisque;
     display:flex;
     justify-content: flex-end;
-    align-items: flex-end;
 }
 
 /* MAIN STYLE RULES */
@@ -107,7 +107,7 @@ header li::after {
 .about-info .content {
     width: 75%;
     margin: 10px 0px;
-    padding: 25px;
+    padding: 10px;
     font-size: 20px;
     font-weight: lighter;
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
@@ -129,18 +129,16 @@ header li::after {
     float: left;
 }
 
-.project-wrapper {
-    display: grid;
-    width: 65%;
-    margin: 10px;
-    padding: 60px;
-    float: left;
-}
-
+/* Beginning of Projects Grid */
 .project-grid-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    width: 75%;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(6, 150px);
+    grid-template-rows: repeat(4, 200px);
     grid-gap: 10px;
     grid-auto-flow: dense;
 }
@@ -148,10 +146,20 @@ header li::after {
 .project-item {
     width: 100%;
     display: flex;
-    justify-content: center;
-    border-radius: 5px solid coral;
+    justify-content: flex-end;
     margin: 5px auto;
     font-size: 35px;
+    position: relative;
+}
+
+.project-item p {
+    width: 95%;
+    font-size: 18px;
+    color: white;
+    bottom: 15px;
+    right: 20px;
+    background-color: coral;
+    position: absolute;
 }
 
 .item1 {
@@ -161,6 +169,7 @@ header li::after {
     background-size: cover;
     grid-column: span 4;
     grid-row: span 2;
+    transition: transform .2s;
 }
 
 .item2 {
@@ -181,6 +190,11 @@ header li::after {
     grid-row: span 1;
 }
 
+/* enarge gifs on hover */
+.item1:hover, .item2:hover, .item3:hover {
+    transform: scale(1.5);
+}
+
 /* CONTACT ME Section */
 .contact-info h2 {
     line-height: 3;
@@ -199,7 +213,8 @@ header li::after {
     text-align: justify;
 }
 
-.contact-details:hover a {
-    color: slategray;
-    transition: color ;
+/* change color of link */
+.contact-details a:hover {
+    background-color: cadetblue;
+    color: white;
 }
