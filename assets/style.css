@@ -160,6 +160,24 @@ header li a:hover {
     right: 20px;
     background-color: coral;
     position: absolute;
+    transition-timing-function:ease-in;
+    z-index:1;
+}
+
+.project-item::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient( rgba(255, 255, 255, 0.664), #024e76);
+    position: absolute;
+    top: 0;
+    left: 0;  
+    opacity: 0;
+}
+
+.project-item:hover:after {
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
 .item1, .item2, .item3 {
