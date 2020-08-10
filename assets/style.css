@@ -1,8 +1,3 @@
-.root {
-    --tur: (cadetblue);
-    --cor: (coral);
-    --test: (lightgreen);
-}
 
 * {
     margin: 0;
@@ -47,10 +42,15 @@ header nav ul {
     list-style: none;
 }
 
-header nav ul li a {
+header nav ul li {
     padding: 10px 15px;
     font-weight: bold;
     font-size: 2vw;
+}
+
+header li::after {
+    content: "";
+    color: slategray;
 }
 
 /* JUMBOTRON Section */
@@ -75,19 +75,29 @@ header nav ul li a {
     align-items: flex-end;
 }
 
-/* About Info Styling */
+/* MAIN STYLE RULES */
+.about-info, .project-info, .contact-info {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
 
 .about-info h2, .project-info h2, .contact-info h2 {
-    width: 25%;
-    margin: 30px 0;
+    width: 20%;
+    margin: 20px 0;
     padding: 25px;
     font-size: 36px;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: cadetblue;
-    border-right: rgb(38, 50, 61) 3px solid;
+    color: coral;
+    border-right: slategray 3px solid;
     text-align: right;
+    text-shadow: 2px 2px 2px bisque;
 }
+
+/* ABOUT ME Section */
 
 .about-info h2 {
     float: left;
@@ -107,7 +117,7 @@ header nav ul li a {
 /* PROJECTS Section */
 
 .project-info h2 {
-    line-height: 10;
+    line-height: 3;
 }
 
 .project-info .content {
@@ -130,7 +140,7 @@ header nav ul li a {
 .project-grid-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-gap: 10px;
     grid-auto-flow: dense;
 }
@@ -149,7 +159,7 @@ header nav ul li a {
     background-position: top;
     background-repeat: none;
     background-size: cover;
-    grid-column: span 5;
+    grid-column: span 4;
     grid-row: span 2;
 }
 
@@ -167,44 +177,29 @@ header nav ul li a {
     background-position: top;
     background-repeat: none;
     background-size: cover;
-    grid-column: span 4;
-    grid-row: span 2;
-}
-
-.item4 {
-    background-image: url(/assets/images/Horiseon.gif);
-    background-position: top;
-    background-repeat: none;
-    background-size: cover;
     grid-column: span 2;
     grid-row: span 1;
 }
 
 /* CONTACT ME Section */
-
-.contact-info {
-    width: 100%;
-    padding: 20px;
-    display: inline-block;
-    vertical-align: top;
-    display: flex;
-    justify-content: space-between;
-}
-
-.contact-details h2 {
-    background-color: bisque;
-    line-height: 8;
+.contact-info h2 {
+    line-height: 3;
 }
 
 .contact-details {
-    margin: 25px 0;
+    margin: 60px 0 25px 0;
     padding: 10px 15px;
     font-weight: bold;
     font-size: 2vw;
-    color: bisque;
-    text-decoration: underline;
 }
 
 .contact-details a {
     color: black;
+    text-decoration: underline;
+    text-align: justify;
+}
+
+.contact-details:hover a {
+    color: slategray;
+    transition: color ;
 }
